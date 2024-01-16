@@ -3,13 +3,16 @@ import InputField from './components.js';
 export default function App() {
   return (
     <div>
-      <InputField />
+      <InputField label="Text at the top" inputId="topInput" />
       <br />
       <br />
-      <InputField />
+      <InputField label="Text at the bottom" inputId="bottomInput" />
       <br />
       <br />
-      <InputField />
+      <InputField
+        label="Which template do you want to use?"
+        inputId="templateInput"
+      />
     </div>
   );
 }

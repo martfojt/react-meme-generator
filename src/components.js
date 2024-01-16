@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 
 // Input field component
-const InputField = () => {
+function InputField({ label, inputId }) {
   const [inputValue, setInputValue] = useState('');
 
   return (
     <div>
-      <label htmlFor="example">Top</label>
+      <label htmlFor={inputId}>{label}</label>
       <input
-        id="example"
+        id={inputId}
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />
     </div>
   );
-};
+}
 
 export default InputField;
