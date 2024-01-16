@@ -5,7 +5,14 @@ const InputField = () => {
   const [inputValue, setInputValue] = useState('');
 
   return (
-    <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+    <div>
+      <label htmlFor="example">Top</label>
+      <input
+        id="example"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+    </div>
   );
 };
 
