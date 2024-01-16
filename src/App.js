@@ -3,10 +3,10 @@ import InputField from './components.js';
 export default function App() {
   return (
     <div>
-      <InputField label="Text at the top" inputId="topInput" />
+      <InputField label="Top text" inputId="topInput" />
       <br />
       <br />
-      <InputField label="Text at the bottom" inputId="bottomInput" />
+      <InputField label="Bottom text" inputId="bottomInput" />
       <br />
       <br />
       <InputField
