@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 // Input field component
 function InputField({ label, inputId }) {
   const [inputValue, setInputValue] = useState('');
-
+  // Input component
   return (
     <div>
       <label htmlFor={inputId}>{label}</label>
@@ -17,3 +17,9 @@ function InputField({ label, inputId }) {
 }
 
 export default InputField;
+
+// Preview component
+
+function showPreview() {
+  return;
+}
