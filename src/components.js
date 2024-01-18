@@ -31,13 +31,14 @@ export function ShowPreview({ imageUrl }) {
         <img
           src="https://api.memegen.link/images/doge.png"
           alt="default meme"
+          data-test-id="meme-image"
         />
       </div>
     );
   } else {
     return (
       <div className="image-container">
-        <img src={imageUrl} alt="meme" />
+        <img src={imageUrl} alt="meme" data-test-id="meme-image" />
       </div>
     );
   }
