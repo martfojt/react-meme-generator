@@ -3,21 +3,15 @@ import { useState } from 'react';
 import InputField, { DownloadButton, ShowPreview } from './components.js';
 
 export default function App() {
-  const [memeTemplate, setMemeTemplate] = useState('');
+  const [memeTemplate, setMemeTemplate] = useState('doge');
   const [topText, setTopText] = useState('');
   const [bottomText, setBottomText] = useState('');
 
-  let imageUrl = '';
-  if (memeTemplate) {
-    imageUrl = `https://api.memegen.link/images/${memeTemplate}`;
-    if (topText) {
-      imageUrl += `/${encodeURI(topText)}`;
-    }
-    if (bottomText) {
-      imageUrl += `/${encodeURI(bottomText)}`;
-    }
-    imageUrl += '.png';
-  }
+  // Construct the image URL dynamically
+  let imageUrl = `https://api.memegen.link/images/${memeTemplate}`;
+  imageUrl += `/${topText ? encodeURI(topText) : '_'}`;
+  imageUrl += `/${bottomText ? encodeURI(bottomText) : '_'}`;
+  imageUrl += '.png';
 
   return (
     <div className="container">
