@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Input field component
-function InputField({ label, inputId }) {
+export default function InputField({ label, inputId }) {
   const [inputValue, setInputValue] = useState('');
   // Input component
   return (
@@ -16,10 +16,24 @@ function InputField({ label, inputId }) {
   );
 }
 
-export default InputField;
+// Image preview component
+export function ShowPreview() {
+  return (
+    <div>
+      <img
+        src="https://api.memegen.link/images/ds/small_file/high_quality.png"
+        alt="meme"
+      />
+    </div>
+  );
+}
 
-// Preview component
+// Download button component
 
-function showPreview() {
-  return;
+export function DownloadButton() {
+  return (
+    <div>
+      <button type="button">Download</button>
+    </div>
+  );
 }

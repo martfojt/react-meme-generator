@@ -1,8 +1,12 @@
-import InputField from './components.js';
+import { DownloadButton } from './components';
+import InputField, { ShowPreview } from './components.js';
 
 export default function App() {
   return (
     <div>
+      <ShowPreview />
+      <br />
+      <br />
       <InputField label="Top text" inputId="topInput" />
       <br />
       <br />
@@ -13,6 +17,9 @@ export default function App() {
         label="Which template do you want to use?"
         inputId="templateInput"
       />
+      <br />
+      <br />
+      <DownloadButton />
     </div>
   );
 }
