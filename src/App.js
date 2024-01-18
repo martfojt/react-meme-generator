@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import InputField, {
   DownloadButton,
   EditImage,
@@ -5,9 +6,9 @@ import InputField, {
 } from './components.js';
 
 export default function App() {
-  const memeTemplate = '';
-  const [topText, setTopText] = '';
-  const [bottomText, setBottomText] = '';
+  const [memeTemplate, setMemeTemplate] = useState('doge');
+  const [topText, setTopText] = useState('');
+  const [bottomText, setBottomText] = useState('');
 
   const imageUrl = `https://api.memegen.link/images/${memeTemplate}/${encodeURI(
     topText,

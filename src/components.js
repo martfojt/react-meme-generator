@@ -16,7 +16,7 @@ export default function InputField({ label, inputId, value, onChange }) {
 }
 
 // Image preview component
-export function ShowPreview() {
+export function ShowPreview({ imageUrl }) {
   return (
     <div>
       <img src={imageUrl} alt="meme" />
