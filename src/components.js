@@ -19,10 +19,7 @@ export default function InputField({ label, inputId, value, onChange }) {
 export function ShowPreview() {
   return (
     <div>
-      <img
-        src={imageUrl}
-        alt="meme"
-      />
+      <img src={imageUrl} alt="meme" />
     </div>
   );
 }
@@ -35,12 +32,3 @@ export function DownloadButton() {
     </div>
   );
 }
-
-export function EditImage(){
-    const [edit, setEdit] = useState('');
-    return(
-
-  );
-}
-
-const url
