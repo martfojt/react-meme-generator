@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 
 // Input field component
-export default function InputField({ label, inputId }) {
+export default function InputField({ label, inputId, value, onChange }) {
   const [inputValue, setInputValue] = useState('');
-  // Input component
   return (
     <div>
       <label htmlFor={inputId}>{label}</label>
@@ -21,7 +20,7 @@ export function ShowPreview() {
   return (
     <div>
       <img
-        src="https://api.memegen.link/images/ds/small_file/high_quality.png"
+        src={imageUrl}
         alt="meme"
       />
     </div>
@@ -29,7 +28,6 @@ export function ShowPreview() {
 }
 
 // Download button component
-
 export function DownloadButton() {
   return (
     <div>
@@ -37,3 +35,12 @@ export function DownloadButton() {
     </div>
   );
 }
+
+export function EditImage(){
+    const [edit, setEdit] = useState('');
+    return(
+
+  );
+}
+
+const url

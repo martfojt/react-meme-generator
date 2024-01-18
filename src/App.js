@@ -1,16 +1,37 @@
-import { DownloadButton } from './components';
-import InputField, { ShowPreview } from './components.js';
+import InputField, {
+  DownloadButton,
+  EditImage,
+  ShowPreview,
+} from './components.js';
 
 export default function App() {
+  const memeTemplate = '';
+  const [topText, setTopText] = '';
+  const [bottomText, setBottomText] = '';
+
+  const imageUrl = `https://api.memegen.link/images/${memeTemplate}/${encodeURI(
+    topText,
+  )}/${encodeURI(bottomText)}.png`;
+
   return (
     <div>
-      <ShowPreview />
+      <ShowPreview imageUrl={imageUrl} />
       <br />
       <br />
-      <InputField label="Top text" inputId="topInput" />
+      <InputField
+        label="Top text"
+        inputId="topInput"
+        value={topText}
+        onChange={setTopText}
+      />
       <br />
       <br />
-      <InputField label="Bottom text" inputId="bottomInput" />
+      <InputField
+        label="Bottom text"
+        inputId="bottomInput"
+        value={bottomText}
+        onChange={setBottomText}
+      />
       <br />
       <br />
       <InputField
