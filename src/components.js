@@ -8,8 +8,8 @@ export default function InputField({ label, inputId, value, onChange }) {
       <label htmlFor={inputId}>{label}</label>
       <input
         id={inputId}
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
       />
     </div>
   );
@@ -17,11 +17,22 @@ export default function InputField({ label, inputId, value, onChange }) {
 
 // Image preview component
 export function ShowPreview({ imageUrl }) {
-  return (
-    <div>
-      <img src={imageUrl} alt="meme" />
-    </div>
-  );
+  if (!imageUrl) {
+    return (
+      <div className="image-container">
+        <img
+          src="https://api.memegen.link/images/doge.png"
+          alt="default meme"
+        />
+      </div>
+    );
+  } else {
+    return (
+      <div className="image-container">
+        <img src={imageUrl} alt="meme" />
+      </div>
+    );
+  }
 }
 
 // Download button component
