@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
-
 // Input field component
 export default function InputField({ label, inputId, value, onChange }) {
-  const [inputValue, setInputValue] = useState('');
   return (
     <div>
       <label htmlFor={inputId}>{label}</label>
       <input
         id={inputId}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
+        value={value} // Controlled by parent component
+        onChange={(e) => onChange(e.target.value)} // Parent component handles change
       />
     </div>
   );
@@ -23,13 +20,14 @@ export function ShowPreview({ imageUrl }) {
         <img
           src="https://api.memegen.link/images/doge.png"
           alt="default meme"
+          data-test-id="meme-image"
         />
       </div>
     );
   } else {
     return (
       <div className="image-container">
-        <img src={imageUrl} alt="meme" />
+        <img src={imageUrl} alt="meme" data-test-id="meme-image" />
       </div>
     );
   }

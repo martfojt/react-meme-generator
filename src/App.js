@@ -23,7 +23,7 @@ export default function App() {
     <div className="container">
       <div className="form-section">
         <InputField
-          label="Template:"
+          label="Meme template"
           inputId="templateInput"
           value={memeTemplate}
           onChange={(value) => setMemeTemplate(value)}
