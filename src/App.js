@@ -43,7 +43,9 @@ export default function App() {
           onChange={setBottomText}
         />
         <br />
-        <DownloadButton />
+        <div className="form-section">
+          <DownloadButton imageUrl={imageUrl} />
+        </div>
       </div>
       <div className="image-section">
         <ShowPreview imageUrl={imageUrl} />

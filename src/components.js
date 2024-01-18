@@ -3,12 +3,11 @@ import React, { useEffect, useState } from 'react';
 
 // Input field component
 export default function InputField({ label, inputId, value, onChange }) {
-  const [inputValue, setInputValue] = useState(value); // Initialize with passed value
+  const [inputValue, setInputValue] = useState(value);
 
-  // Handle local change
   const handleChange = (e) => {
-    setInputValue(e.target.value); // Update local state
-    onChange(e.target.value); // Pass the new value to the parent component
+    setInputValue(e.target.value);
+    onChange(e.target.value);
   };
 
   // Effect to update local state when the value prop changes
@@ -45,10 +44,18 @@ export function ShowPreview({ imageUrl }) {
 }
 
 // Download button component
-export function DownloadButton() {
+export function DownloadButton({ imageUrl }) {
+  const handleDownload = () => {
+    if (imageUrl) {
+      saveAs(imageUrl, 'meme.png');
+    }
+  };
+
   return (
     <div>
-      <button type="button">Download</button>
+      <button type="button" onClick={handleDownload}>
+        Download
+      </button>
     </div>
   );
 }
