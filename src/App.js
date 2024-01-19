@@ -4,8 +4,16 @@ import InputField, { DownloadButton, ShowPreview } from './components.js';
 
 export default function App() {
   const [memeTemplate, setMemeTemplate] = useState('doge');
+  const [memeTemplateInput, setMemeTemplateInput] = useState(''); // New state for the input field
   const [topText, setTopText] = useState('');
   const [bottomText, setBottomText] = useState('');
+
+  const handleMemeTemplateChange = (value) => {
+    setMemeTemplateInput(value);
+    if (value) {
+      setMemeTemplate(value);
+    }
+  };
 
   // Construct the image URL dynamically
   let imageUrl = `https://api.memegen.link/images/${memeTemplate}`;
@@ -19,8 +27,8 @@ export default function App() {
         <InputField
           label="Meme template"
           inputId="templateInput"
-          value={memeTemplate}
-          onChange={(value) => setMemeTemplate(value)}
+          value={memeTemplateInput}
+          onChange={handleMemeTemplateChange}
         />
         <br />
         <InputField
