@@ -29,7 +29,7 @@ export function ShowPreview({ imageUrl }) {
     return (
       <div className="image-container">
         <img
-          src="https://api.memegen.link/images/doge//.png"
+          src="https://api.memegen.link/images/puffin//.png"
           alt="default meme"
           data-test-id="meme-image"
         />

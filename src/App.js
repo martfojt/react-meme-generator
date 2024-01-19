@@ -3,7 +3,7 @@ import { useState } from 'react';
 import InputField, { DownloadButton, ShowPreview } from './components.js';
 
 export default function App() {
-  const [memeTemplate, setMemeTemplate] = useState('doge');
+  const [memeTemplate, setMemeTemplate] = useState('puffin');
   const [memeTemplateInput, setMemeTemplateInput] = useState(''); // New state for the input field
   const [topText, setTopText] = useState('');
   const [bottomText, setBottomText] = useState('');
